@@ -4,11 +4,7 @@ import { validateCheckOrder } from "./order.validation";
 
 const router = express.Router();
 
-
-
-
-
-router.post("/",validateCheckOrder, orderController.crateOrder);
+router.post("/", validateCheckOrder, orderController.crateOrder);
 router.get("/", orderController.getAllOrder);
 router.get("/by-email", orderController.getOrdersByEmail);
 
