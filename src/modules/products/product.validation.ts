@@ -1,6 +1,5 @@
 import { z } from "zod";
 
-
 const VariantSchema = z.object({
   type: z.string(),
   value: z.string(),
@@ -32,11 +31,8 @@ export const productUpdateSchema = z.object({
   description: z.string().optional(),
   price: z.number().min(0).optional(),
   category: z.string().optional(),
+  
   tags: z.array(z.string()).optional(),
   variants: z.array(VariantUpdateSchema).optional(),
   inventory: InventoryUpdateSchema.optional(),
 });
-
-
-
-
